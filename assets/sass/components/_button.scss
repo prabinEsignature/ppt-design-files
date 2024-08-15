@@ -1,0 +1,220 @@
+$btn-bg: $primary;
+$btn-text-color: $white;
+$btn-font-weight: map-get($font-weights, "normal");
+$btn-font-size: map-get($font-sizes, "base");
+$btn-padding-x: 2px;
+$btn-padding-y: 16px;
+$btn-border-color: $primary;
+$btn-border-width: 1px;
+$btn-border-radius: 8px;
+
+$btn-hover-bg: darken($primary, 10%);
+$btn-hover-text-color: $white;
+$btn-hover-border-color: $primary;
+
+// BUTTON COLOR VARIANTS
+$button-variants: (
+  "primary": (
+    bg: $primary,
+    text: $white,
+    border-color: $primary,
+    hover-bg: darken($primary, 10%),
+    hover-text-color: $white
+  )
+);
+
+.btn {
+  @extend %flex-inline-center;
+  text-align: center;
+  font-weight: $btn-font-weight;
+  font-family: $font-family-inter;
+  font-size: $btn-font-size;
+  border-radius: $btn-border-radius;
+  column-gap: 8px;
+  height: 48px;
+  white-space: nowrap;
+  padding: $btn-padding-x $btn-padding-y;
+  border: $btn-border-width solid $btn-border-color;
+  background-color: $btn-bg;
+  color: $btn-text-color;
+  vertical-align: middle;
+  transition: $default-transition;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  background-image: none;
+  transform-origin: bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // &:is(:hover, :focus-visible) {
+  //   background-color: scale-color($btnColor, $lightness: -20%);
+  // }
+
+  // EFFECTS
+  &:hover,
+  &:focus,
+  &.focus {
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background: $btn-hover-bg !important;
+    color: $btn-hover-text-color;
+    border-color: $btn-hover-border-color;
+    opacity: 1 !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: no-drop;
+    background: $primary;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  // BUTTON INNER ELEMENTS
+  &-text {
+    font-weight: 600;
+  }
+
+  // BUTTON SIZE VARIANTS
+  &.btn-sm {
+    font-size: 16px;
+    height: 42px;
+
+    @include breakpoint-down(xs) {
+      font-size: 14px;
+      height: 36px;
+    }
+  }
+
+  &.btn-xs {
+    font-size: 12px;
+    height: 32px;
+    column-gap: 4px;
+    border-radius: 6px;
+
+    @include breakpoint-down(xs) {
+      height: 28px;
+    }
+  }
+
+  // BUTTON WIDTH VARIANTS
+  &.btn-wide {
+    min-width: 260px;
+  }
+
+  // ACCENT BUTTONS
+  @each $color-name, $color-value in $accent-color-list {
+    &.btn-#{$color-name} {
+      background: $color-value !important;
+      color: $white !important;
+      border: $btn-border-width solid $color-value !important;
+
+      &:hover,
+      &:focus,
+      &:disabled,
+      &:active,
+      &.disabled,
+      &.active {
+        background: $color-value !important;
+        border-color: $color-value !important;
+        color: $white !important;
+      }
+    }
+  }
+}
+
+@each $variant, $props in $button-variants {
+  .btn-#{$variant} {
+    background: map-get($props, bg) !important;
+    color: map-get($props, text) !important;
+    border: $btn-border-width solid map-get($props, border-color) !important;
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active,
+    &.disabled,
+    &.active {
+      background: map-get($props, hover-bg) !important;
+      border-color: map-get($props, border-color) !important;
+      color: map-get($props, hover-text-color) !important;
+    }
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+// BUTTON BLOCK - FULL WIDTH
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 0.5rem;
+}
+
+// BUTTON LINK
+.btn-link {
+  color: $payne-grey;
+  font-size: map-get($font-sizes, "sm");
+  font-weight: map-get($font-weights, "normal");
+  font-style: normal;
+  @extend %flex-inline-center;
+  column-gap: 8px;
+
+  &:hover {
+    color: $primary;
+    font-weight: 600;
+  }
+
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+    @extend %flex-inline-center;
+  }
+
+  &.btn-link-sm {
+    .btn-text {
+      font-size: 12px;
+    }
+    .btn-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

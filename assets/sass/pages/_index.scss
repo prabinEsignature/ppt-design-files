@@ -1,0 +1,101 @@
+.admin-panel {
+}
+
+.admin-sidebar {
+  padding: 24px 20px;
+  width: 260px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 2px 4px 4px rgba(13, 23, 33, 0.18);
+
+  .sidebar-menu {
+    .menu-item {
+      width: 100%;
+      padding: 14px 16px;
+
+      &-icon {
+        color: $white;
+        transition: $default-transition;
+      }
+
+      &-text {
+        transition: $default-transition;
+      }
+
+      &:hover,
+      &.active {
+        .menu-item-icon {
+          color: $white;
+        }
+        .menu-item-text {
+          color: $white !important;
+        }
+      }
+
+      &.active {
+        background: darken($primary, 8%);
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.admin-main {
+  margin-left: 260px;
+  height: 100%;
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-appbar {
+  padding: 16px 32px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .appbar-search {
+    &-form {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    &-icon{
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .notification-btn {
+    .icon-text {
+      background: map-get($accent-color-list, "error");
+      top: -6px;
+      left: 14px;
+    }
+  }
+
+  .profile-btn {
+    &-img {
+      width: 40px;
+      height: 40px;
+      outline: 3px solid rgba(255, 255, 255, 0.2);
+      outline-offset: -3px;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+.admin-content {
+  background: rgb(244, 246, 248);
+  flex: 1;
+  padding: 16px 32px;
+}

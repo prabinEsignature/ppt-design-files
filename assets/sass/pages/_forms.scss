@@ -1,0 +1,29 @@
+.page-form {
+    background: rgb(226, 232, 240);
+    min-height: 100vh;
+
+    &-logo{
+        max-width: 280px;
+    }
+
+    &-wrapper {
+        max-width: 400px;
+        min-width: 400px;
+        padding: 32px;
+        box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
+        transition: $default-transition;
+
+        &:hover{
+            box-shadow: 0 2px 4px 4px rgba(13, 23, 33, 0.08);
+        }
+
+        @include breakpoint-down(sm){
+            min-width: 360px;
+        }
+
+        @include breakpoint-down(xs){
+            min-width: auto;
+            width: 100%;
+        }
+    }
+}
