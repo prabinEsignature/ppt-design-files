@@ -4145,6 +4145,13 @@ textarea.form-control {
   }
 }
 
+.form-image-preview {
+  width: 70px;
+  height: 70px;
+  outline: 1px solid #44318d;
+  outline-offset: 2px;
+}
+
 .form-elem-group {
   display: grid;
   row-gap: 20px;

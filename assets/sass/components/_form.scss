@@ -127,6 +127,15 @@ textarea {
   }
 }
 
+.form-image{
+  &-preview{
+    width: 70px;
+    height: 70px;
+    outline: 1px solid $primary;
+    outline-offset: 2px;
+  }
+}
+
 .form-elem-group {
   display: grid;
   row-gap: 20px;
