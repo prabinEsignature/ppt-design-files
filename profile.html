@@ -57,7 +57,10 @@
                   >Dashboard</span
                 >
               </a>
-              <a href="users.html" class="menu-item d-flex align-items-center gap-x-3 active">
+              <a
+                href="users.html"
+                class="menu-item d-flex align-items-center gap-x-3 active"
+              >
                 <span class="menu-item-icon icon-16">
                   <i class="fa-solid fa-user"></i>
                 </span>
@@ -148,11 +151,21 @@
                   </span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-sm font-medium" href="#">My Profile</a></li>
-                  <li><a class="dropdown-item text-sm font-medium" href="#">Change Password</a></li>
+                  <li>
+                    <a class="dropdown-item text-sm font-medium" href="#"
+                      >My Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-sm font-medium" href="#"
+                      >Change Password</a
+                    >
+                  </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item text-sm font-medium" href="#">Logout</a>
+                    <a class="dropdown-item text-sm font-medium" href="#"
+                      >Logout</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -162,6 +175,146 @@
 
           <!-- ADMIN CONTENT -->
           <div class="admin-content">
+            <div class="dataform rounded-8 bg-white">
+              <div class="dataform-head">
+                <h3 class="font-bold mt-0 text-rich-black text-2xl">
+                    General Settings
+                </h3>
+                <p class="text-sm mb-0">
+                    Your current Primary email address is <span class="text-primary font-medium">admin.user@gmail.com</span>.
+                </p>
+              </div>
+              <div class="dataform-body mt-4">
+                <form>
+                  <div class="form-wrapper">
+                    <div class="form-elem-group mb-4">
+                      <div class="d-grid grid-cols-2 gap-4">
+                        <div class="form-elem">
+                          <label
+                            for=""
+                            class="form-label font-medium text-payne-grey"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="E.g. Richardson"
+                          />
+                        </div>
+                        <div class="form-elem">
+                          <label
+                            for=""
+                            class="form-label font-medium text-payne-grey"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="E.g. Jackson"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-elem">
+                        <label
+                          for=""
+                          class="form-label font-medium text-payne-grey"
+                          >Contact Address</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="E.g. Richardson"
+                        />
+                      </div>
+                      <div class="d-grid grid-cols-2 gap-4">
+                        <div class="form-elem">
+                          <label
+                            for=""
+                            class="form-label font-medium text-payne-grey"
+                            >Email Address</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="E.g. richarson@gmail.com"
+                          />
+                        </div>
+                        <div class="form-elem">
+                          <label
+                            for=""
+                            class="form-label font-medium text-payne-grey"
+                            >Phone</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="+1 123 XXX XXXX"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-elem">
+                        <label
+                          for=""
+                          class="form-label font-medium text-payne-grey"
+                          >Role</label
+                        >
+                        <select class="form-select">
+                          <option selected>-- Select Role --</option>
+                          <option value="admin">Admin</option>
+                          <option value="guest">Guest</option>
+                          <option value="author0">Author</option>
+                        </select>
+                      </div>
+                      <div class="form-elem">
+                        <label for="" class="form-label">Status</label>
+                        <div class="d-flex flex-wrap gap-x-5">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              value=""
+                              id=""
+                              name="status"
+                            />
+                            <label class="form-check-label text-sm ps-2" for="">
+                              Active
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              value=""
+                              id=""
+                              name="status"
+                            />
+                            <label class="form-check-label text-sm ps-2" for="">
+                              Inactive
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-elem">
+                        <label
+                          for=""
+                          class="form-label font-medium text-payne-grey"
+                          >Profile Photo</label
+                        >
+                        <input
+                          type="file"
+                          accept="image/*"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      <span class="btn-text">Create User</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
             <div class="dataform rounded-8 bg-white">
               <div class="dataform-head">
                 <h3 class="font-bold mt-0 text-rich-black text-2xl">
@@ -288,7 +441,8 @@
                           >Profile Photo</label
                         >
                         <input
-                          type="file" accept="image/*"
+                          type="file"
+                          accept="image/*"
                           class="form-control"
                         />
                       </div>

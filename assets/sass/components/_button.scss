@@ -94,6 +94,7 @@ $button-variants: (
   &.btn-sm {
     font-size: 16px;
     height: 42px;
+    border-radius: 6px;
 
     @include breakpoint-down(xs) {
       font-size: 14px;

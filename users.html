@@ -46,8 +46,8 @@
           <div class="sidebar-body w-100 mt-2">
             <div class="sidebar-menu d-grid gap-y-2">
               <a
-                href="#"
-                class="menu-item d-flex align-items-center gap-x-3 active"
+                href="index.html"
+                class="menu-item d-flex align-items-center gap-x-3"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fa-solid fa-house"></i>
@@ -57,7 +57,7 @@
                   >Dashboard</span
                 >
               </a>
-              <a href="#" class="menu-item d-flex align-items-center gap-x-3">
+              <a href="users.html" class="menu-item d-flex align-items-center gap-x-3 active">
                 <span class="menu-item-icon icon-16">
                   <i class="fa-solid fa-user"></i>
                 </span>
@@ -130,17 +130,57 @@
                   >4</span
                 >
               </button>
-              <button type="button" class="profile-btn">
-                <span
-                  class="profile-btn-img rounded-circle overflow-hidden d-inline-flex"
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="profile-btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <img
-                    src="assets/images/profile.jpg"
-                    class="w-100 h-100 object-cover"
-                    alt=""
-                  />
-                </span>
-              </button>
+                  <span
+                    class="profile-btn-img rounded-circle overflow-hidden d-inline-flex"
+                  >
+                    <img
+                      src="assets/images/profile.jpg"
+                      class="w-100 h-100 object-cover"
+                      alt=""
+                    />
+                  </span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="#"
+                      ><span class="icon-20"
+                        ><i class="fa-solid fa-user"></i></span
+                      >My Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="#"
+                    >
+                      <span class="icon-20"
+                        ><i class="fa-solid fa-lock"></i> </span
+                      >Change Password</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="#"
+                    >
+                      <span class="icon-20">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                      </span>
+                      <span>Logout</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- END OF ADMIN APPBAR -->
