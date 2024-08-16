@@ -8,7 +8,7 @@ $hamburger-settings-gutter: 0 !default;
   $width: 24px,
   $height: 2px,
   $gutter: 5px,
-  $color: #232323,
+  $color: $primary,
   $border-radius: 0,
   $duration: 0.3s,
   $timing-function: ease
@@ -26,7 +26,8 @@ $hamburger-settings-gutter: 0 !default;
     display: block;
     @include box($width, $height);
     border-radius: 4px;
-    transition: background-color $duration $timing-function,
+    transition:
+      background-color $duration $timing-function,
       transform $duration $timing-function;
     @if ($border-radius !=0) {
       border-radius: $border-radius;
@@ -50,36 +51,30 @@ $hamburger-settings-gutter: 0 !default;
 @mixin hamburger-animation {
   background-color: transparent;
   &:before {
-    transform: translateY(
-        $hamburger-settings-gutter + $hamburger-settings-height
-      )
-      rotate(45deg);
+    transform: translateY($hamburger-settings-gutter + $hamburger-settings-height) rotate(45deg);
   }
   &:after {
-    transform: translateY(
-        -($hamburger-settings-gutter + $hamburger-settings-height)
-      )
-      rotate(-45deg);
+    transform: translateY(-($hamburger-settings-gutter + $hamburger-settings-height)) rotate(-45deg);
   }
 }
 
 //Example
 .menu-bar {
-  @include hamburger(24px, 2px, 5px, #232323, $timing-function: linear);
+  @include hamburger(24px, 2px, 5px, $primary, $timing-function: linear);
 }
 .hamburger {
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
   &.is-open {
     .menu-bar {
-      @include hamburger-animation();
+      // @include hamburger-animation();
     }
   }
 }
-
-//Js
-//$('.hamburger').on('click',function(){
-//  $(this).toggleClass('is-open');
-//})

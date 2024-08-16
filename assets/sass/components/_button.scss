@@ -18,7 +18,7 @@ $button-variants: (
     bg: $primary,
     text: $white,
     border-color: $primary,
-    hover-bg: darken($primary, 10%),
+    hover-bg: darken($primary, 15%),
     hover-text-color: $white
   )
 );
@@ -47,10 +47,6 @@ $button-variants: (
   transform-origin: bottom;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  // &:is(:hover, :focus-visible) {
-  //   background-color: scale-color($btnColor, $lightness: -20%);
-  // }
 
   // EFFECTS
   &:hover,
@@ -126,12 +122,15 @@ $button-variants: (
     &.btn-#{$color-name} {
       background: $color-value !important;
       color: $white !important;
-      border: $btn-border-width solid $color-value !important;
+      box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
       &:hover,
       &:focus,
       &:disabled,
       &:active,
+      &:focus-visible,
       &.disabled,
       &.active {
         background: $color-value !important;
@@ -147,6 +146,9 @@ $button-variants: (
     background: map-get($props, bg) !important;
     color: map-get($props, text) !important;
     border: $btn-border-width solid map-get($props, border-color) !important;
+    box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
     &:hover,
     &:focus,

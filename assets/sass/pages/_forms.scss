@@ -1,29 +1,40 @@
 .page-form {
-    background: rgb(226, 232, 240);
     min-height: 100vh;
+    background: url(../images/auth_bg.png) center/cover no-repeat;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
-    &-logo{
+    &-logo {
         max-width: 280px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &-wrapper {
         max-width: 400px;
         min-width: 400px;
         padding: 32px;
-        box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         transition: $default-transition;
 
-        &:hover{
+        &:hover {
             box-shadow: 0 2px 4px 4px rgba(13, 23, 33, 0.08);
         }
 
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
             min-width: 360px;
         }
 
-        @include breakpoint-down(xs){
+        @include breakpoint-down(xs) {
             min-width: auto;
             width: 100%;
         }
     }
+}
+
+.dataform{
+    box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
+    padding: 32px;
+    margin: 24px 0;
+    max-width: 920px;
 }

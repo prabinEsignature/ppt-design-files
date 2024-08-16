@@ -1,7 +1,7 @@
 // Define your color variables
 $scrollbar-thumb-color: $primary;
-$scrollbar-track-color: $primary;
-$scrollbar-hover-color: darken($scrollbar-thumb-color, 10%);
+$scrollbar-track-color: transparent;
+$scrollbar-hover-color: $primary;
 
 // Mixin to generate scrollbar styles
 @mixin scrollbar(
