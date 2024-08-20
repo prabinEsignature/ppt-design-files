@@ -4,13 +4,7 @@ $scrollbar-track-color: transparent;
 $scrollbar-hover-color: $primary;
 
 // Mixin to generate scrollbar styles
-@mixin scrollbar(
-  $direction,
-  $size: 8px,
-  $thumb-radius: 10px,
-  $track-radius: 10px,
-  $transition-speed: 0.3s
-) {
+@mixin scrollbar($direction, $size: 8px, $thumb-radius: 10px, $track-radius: 10px, $transition-speed: 0.3s) {
   overflow-#{$direction}: scroll;
 
   &::-webkit-scrollbar {
@@ -37,7 +31,12 @@ $scrollbar-hover-color: $primary;
 .scrollbar-x {
   @include scrollbar("x");
 }
-
 .scrollbar-y {
   @include scrollbar("y");
+}
+.scrollbar-y-sm {
+  @include scrollbar("y", 6px);
+}
+.scrollbar-x-sm {
+  @include scrollbar("x", 6px);
 }

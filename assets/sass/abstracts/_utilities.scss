@@ -550,7 +550,7 @@ $margin-values: (12, 20);
 }
 
 $border-colors: (
-  platinum: #e5e5e5
+  gray-200: #E2E8F0
 );
 
 $directions: (
@@ -681,4 +681,8 @@ a.hover-theme{
   @include breakpoint-down(sm){
     grid-template-columns: 100%;
   }
+}
+
+.invert-white{
+  filter: invert(1) brightness(100);
 }

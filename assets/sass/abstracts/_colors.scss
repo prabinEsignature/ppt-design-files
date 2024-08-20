@@ -4,13 +4,17 @@ $white: #fff;
 $prussian-blue: #1e293b;
 $french-gray: #cbd5e1;
 $primary: #44318d;
-$primary-light: #4F3C98;
+$primary-light: #4f3c98;
 $secondary: #ffc000;
 $slate-gray: #64748b;
 $rich-black: #161c24;
 $gunmetal: #212b36;
 $gray-600: #637381;
-
+$primary-100: rgba(68, 49, 141, 0.1);
+$primary-200: rgba(68, 49, 141, 0.2);
+$primary-300: rgba(68, 49, 141, 0.3);
+$primary-400: rgba(68, 49, 141, 0.4);
+$primary-500: rgba(68, 49, 141, 0.5);
 
 $colors: (
   payne-grey: #475569,
@@ -19,12 +23,18 @@ $colors: (
   prussian-blue: #1e293b,
   french-gray: #cbd5e1,
   primary: #44318d,
-  primary-light: #4F3C98,
+  primary-light: #4f3c98,
   secondary: #ffc000,
   slate-gray: #64748b,
   rich-black: #161c24,
   gunmetal: #212b36,
-  gray-600: #637381
+  gray-600: #637381,
+  primary-50: rgba(68, 49, 141, 0.05),
+  primary-100: rgba(68, 49, 141, 0.1),
+  primary-200: rgba(68, 49, 141, 0.2),
+  primary-300: rgba(68, 49, 141, 0.3),
+  primary-400: rgba(68, 49, 141, 0.4),
+  primary-500: rgba(68, 49, 141, 0.5)
 );
 
 $accent-color-list: (

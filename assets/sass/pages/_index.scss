@@ -196,7 +196,29 @@
     outline: 4px solid rgba(255, 255, 255, 0.2);
   }
 
-  .user-head-bottom{
+  .user-head-bottom {
     padding: 70px 20px 20px 20px;
   }
+}
+
+.promptdata {
+  box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
+  padding: 32px;
+  margin: 24px 0;
+  max-width: 920px;
+}
+.promptdata-list {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.promptdata-item {
+  padding: 16px;
+  border-radius: 8px;
+  grid-template-columns: 40px auto;
+  gap: 16px;
+}
+.promptdata-item-text {
+}
+.promptdata-item-text.text-prussian-blue p {
+  color: $prussian-blue !important;
 }
