@@ -4767,20 +4767,20 @@ table td {
   }
 }
 
-.dataform, .promptform {
+.dataform, .promptform, .preview-block {
   box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
   padding: 32px;
   margin: 24px 0;
   max-width: 920px;
 }
 @media (max-width: 991.98px) {
-  .dataform, .promptform {
+  .dataform, .promptform, .preview-block {
     padding: 24px;
     margin: 20px 0;
   }
 }
 @media (max-width: 575.98px) {
-  .dataform, .promptform {
+  .dataform, .promptform, .preview-block {
     padding: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
