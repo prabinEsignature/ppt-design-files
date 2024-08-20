@@ -161,7 +161,6 @@
 
   @include breakpoint-down(lg) {
     padding: 16px;
-    margin-top: 64px;
   }
 }
 
@@ -274,6 +273,10 @@
 
 .dash-head{
   min-height: 200px;
+
+  @include breakpoint-down(md){
+    min-height: auto;
+  }
 }
 
 .dash-card{
@@ -282,8 +285,18 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
   border: 0!important;
   margin-top: -80px;
+
+  @include breakpoint-down(md){
+    margin-top: 0;
+  }
 }
 
 .dash-cards{
   padding: 0 40px;
+
+  @include breakpoint-down(md){
+    grid-template-columns: 100%!important;
+    margin-top: 32px;
+    padding: 0;
+  }
 }

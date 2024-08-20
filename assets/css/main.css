@@ -4615,7 +4615,6 @@ table td {
 @media (max-width: 991.98px) {
   .admin-content {
     padding: 16px;
-    margin-top: 64px;
   }
 }
 
@@ -4721,6 +4720,11 @@ table td {
 .dash-head {
   min-height: 200px;
 }
+@media (max-width: 767.98px) {
+  .dash-head {
+    min-height: auto;
+  }
+}
 
 .dash-card {
   padding: 32px 24px;
@@ -4729,9 +4733,21 @@ table td {
   border: 0 !important;
   margin-top: -80px;
 }
+@media (max-width: 767.98px) {
+  .dash-card {
+    margin-top: 0;
+  }
+}
 
 .dash-cards {
   padding: 0 40px;
+}
+@media (max-width: 767.98px) {
+  .dash-cards {
+    grid-template-columns: 100% !important;
+    margin-top: 32px;
+    padding: 0;
+  }
 }
 
 .page-form {
