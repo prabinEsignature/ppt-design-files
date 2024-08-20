@@ -536,37 +536,308 @@
                   </tbody>
                 </table>
               </div>
+            </div>
 
+            <div class="datatable py-3">
               <div
-                class="datatable-pagination d-flex justify-content-center mt-4"
+                class="datatable-head d-flex justify-content-between align-items-end mb-4"
               >
-                <nav>
-                  <ul class="pagination">
-                    <li class="page-item">
-                      <a
-                        class="page-link icon-link"
-                        href="#"
-                        aria-label="Previous"
-                      >
-                        <span aria-hidden="true">&laquo;</span>
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link icon-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+                <h3 class="text-xl font-bold text-rich-black">All Users</h3>
+                <a href="users.html" class="btn btn-xs btn-primary">
+                  <span class="btn-text">View All</span>
+                  <span class="btn-icon"
+                    ><i class="fas fa-long-arrow-alt-right"></i
+                  ></span>
+                </a>
+              </div>
+              <p class="text-sm">Showing 1 to 5 of 5 entries</p>
+              <div class="table-wrapper scrollbar-x">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>name</th>
+                      <th>Address</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>Added on</th>
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="form-check-input" />
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center gap-x-2">
+                          <span
+                            class="user-circle icon-32 d-inline-flex aling-items-center justify-content-center rounded-circle overflow-hidden"
+                          >
+                            <img
+                              src="assets/images/user1.png"
+                              class="object-cover w-100 h-100"
+                              alt=""
+                            />
+                          </span>
+                          <span>Ann Culhane</span>
+                        </div>
+                      </td>
+                      <td>Tokyo, Japan</td>
+                      <td>annculhane@gmail.com</td>
+                      <td>Admin</td>
+                      <td>
+                        <span class="status-badge status-badge-active"
+                          >Active</span
+                        >
+                      </td>
+                      <td>Mon 9 Aug, 10:49 AM</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="form-check-input" />
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center gap-x-2">
+                          <span
+                            class="user-circle icon-32 d-inline-flex aling-items-center justify-content-center rounded-circle overflow-hidden"
+                          >
+                            <img
+                              src="assets/images/user1.png"
+                              class="object-cover w-100 h-100"
+                              alt=""
+                            />
+                          </span>
+                          <span>Ann Culhane</span>
+                        </div>
+                      </td>
+                      <td>United States</td>
+                      <td>ahmadrosser@gmail</td>
+                      <td>Admin</td>
+                      <td>
+                        <span class="status-badge status-badge-inactive"
+                          >Inactive</span
+                        >
+                      </td>
+                      <td>Mon 9 Aug, 10:49 AM</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="form-check-input" />
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center gap-x-2">
+                          <span
+                            class="user-circle icon-32 d-inline-flex aling-items-center justify-content-center rounded-circle overflow-hidden"
+                          >
+                            <img
+                              src="assets/images/user1.png"
+                              class="object-cover w-100 h-100"
+                              alt=""
+                            />
+                          </span>
+                          <span>Ann Culhane</span>
+                        </div>
+                      </td>
+                      <td>Canda</td>
+                      <td>leostanton@gmail</td>
+                      <td>Admin</td>
+                      <td>
+                        <span class="status-badge status-badge-active"
+                          >Active</span
+                        >
+                      </td>
+                      <td>Mon 9 Aug, 10:49 AM</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="form-check-input" />
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center gap-x-2">
+                          <span
+                            class="user-circle icon-32 d-inline-flex aling-items-center justify-content-center rounded-circle overflow-hidden"
+                          >
+                            <img
+                              src="assets/images/user2.png"
+                              class="object-cover w-100 h-100"
+                              alt=""
+                            />
+                          </span>
+                          <span>Ann Culhane</span>
+                        </div>
+                      </td>
+                      <td>Tokyo, Japan</td>
+                      <td>annculhane@gmail.com</td>
+                      <td>Admin</td>
+                      <td>
+                        <span class="status-badge status-badge-active"
+                          >Active</span
+                        >
+                      </td>
+                      <td>Mon 9 Aug, 10:49 AM</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="form-check-input" />
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center gap-x-2">
+                          <span
+                            class="user-circle icon-32 d-inline-flex aling-items-center justify-content-center rounded-circle overflow-hidden"
+                          >
+                            <img
+                              src="assets/images/user3.png"
+                              class="object-cover w-100 h-100"
+                              alt=""
+                            />
+                          </span>
+                          <span>Ann Culhane</span>
+                        </div>
+                      </td>
+                      <td>United States</td>
+                      <td>ahmadrosser@gmail</td>
+                      <td>Admin</td>
+                      <td>
+                        <span class="status-badge status-badge-active"
+                          >Active</span
+                        >
+                      </td>
+                      <td>Mon 9 Aug, 10:49 AM</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
