@@ -1,33 +1,33 @@
-.page-sc-pagination {
-    @include breakpoint-down(md){
-        flex-direction: column;
+.datatable-pagination {
+    .pagination{
+        gap: 6px;
     }
+    .page-item {
+        .page-link {
+            border-radius: 8px !important;
+            border: 1px solid $primary-200;
+            background: $white;
+            color: #5d5d5d !important;
+            min-width: 40px;
+            height: 40px;
+            text-align: center;
+            transition: $default-transition;
 
-    .pagination-show-block {
-        .form-select {
-            width: 54px;
-            height: 28px !important;
-            padding: 0 8px !important;
-            border-radius: 4px !important;
-            background-position: right 0.2rem center !important;
-        }
-    }
+            &.active,
+            &:hover {
+                border-radius: 8px;
+                border: 1px solid $primary-500 !important;
+                background: $primary-100 !important;
+                color: $primary !important;
+            }
 
-    .pagination-numbers-block {
-        .page-item {
-            .page-link {
-                border-radius: 8px !important;
-                border: 1px solid #e7e7e7;
-                background: #f6f6f6;
-                color: #5d5d5d !important;
+            &:focus{
+                box-shadow: none!important;
+            }
 
-                &.active,
-                &:hover {
-                    border-radius: 8px;
-                    border: 1px solid #c0e0fd !important;
-                    background: #eff7ff !important;
-                    color: #2975e7 !important;
-                }
+            &.icon-link{
+                background: $primary;
+                color: $white!important;
             }
         }
     }

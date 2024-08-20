@@ -34,7 +34,7 @@
             class="sidebar-head d-flex align-items-center justify-content-between w-100"
           >
             <h3 class="text-white text-2xl font-bold mb-0 font-dmsans">
-              Dash UI
+              <img src="assets/images/logo_white.png" alt="" />
             </h3>
             <button
               type="button"
@@ -48,7 +48,7 @@
             <div class="sidebar-menu d-grid gap-y-2">
               <a
                 href="index.html"
-                class="menu-item d-flex align-items-center gap-x-3 active"
+                class="menu-item d-flex align-items-center gap-x-3"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fa-solid fa-house"></i>
@@ -85,7 +85,7 @@
 
               <a
                 href="archives.html"
-                class="menu-item d-flex align-items-center gap-x-3"
+                class="menu-item d-flex align-items-center gap-x-3 active"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fas fa-folder"></i>
@@ -200,58 +200,6 @@
 
           <!-- ADMIN CONTENT -->
           <div class="admin-content">
-            <div class="admin-dashboard">
-              <div class="dash-head bg-primary rounded-12 p-3">
-                <h2 class="text-3xl font-bold text-white">Dashboard</h2>
-              </div>
-              <div class="dash-cards d-grid grid-cols-2 gap-8">
-                <div class="card dash-card">
-                  <div
-                    class="dash-card-head d-flex align-items-center justify-content-between"
-                  >
-                    <p
-                      class="dash-card-ttl text-base font-semibold text-prussian-blue"
-                    >
-                      Total Users
-                    </p>
-                    <span
-                      class="dash-card-icon icon-36 rounded-6 bg-primary-200 text-primary"
-                    >
-                      <i class="fas fa-users"></i>
-                    </span>
-                  </div>
-                  <div class="dash-card-body">
-                    <span
-                      class="dash-card-val font-bold text-rich-black text-5xl"
-                      >45</span
-                    >
-                  </div>
-                </div>
-                <div class="card dash-card">
-                  <div
-                    class="dash-card-head d-flex align-items-center justify-content-between"
-                  >
-                    <p
-                      class="dash-card-ttl text-base font-semibold text-prussian-blue"
-                    >
-                      Total Documents Created
-                    </p>
-                    <span
-                      class="dash-card-icon icon-36 rounded-6 bg-primary-200 text-primary"
-                    >
-                      <i class="fas fa-file-alt"></i>
-                    </span>
-                  </div>
-                  <div class="dash-card-body">
-                    <span
-                      class="dash-card-val font-bold text-rich-black text-5xl"
-                      >45</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="datatable py-3">
               <div
                 class="datatable-head d-flex justify-content-between align-items-end mb-4"
@@ -532,15 +480,277 @@
                         </div>
                       </td>
                     </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>2 days</td>
+                      <td>Introduction to Quantum Computing</td>
+                      <td>25</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>12 days</td>
+                      <td>Cybersecurity Essentials</td>
+                      <td>45</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>54 days</td>
+                      <td>Basics of Machine Learning Algorithms</td>
+                      <td>120</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>7 days</td>
+                      <td>Advanced Python Programming</td>
+                      <td>55</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>2 days</td>
+                      <td>Introduction to Quantum Computing</td>
+                      <td>25</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>12 days</td>
+                      <td>Cybersecurity Essentials</td>
+                      <td>45</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>54 days</td>
+                      <td>Basics of Machine Learning Algorithms</td>
+                      <td>120</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>7 days</td>
+                      <td>Advanced Python Programming</td>
+                      <td>55</td>
+                      <td>
+                        <div
+                          class="tbl-actions d-flex align-items-center gap-x-2 justify-content-center"
+                        >
+                          <a
+                            href="details_user.html"
+                            class="icon-btn icon-btn-view icon-20"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a
+                            href="edit_user.html"
+                            class="icon-btn icon-btn-edit icon-20"
+                          >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </a>
+                          <button
+                            type="button"
+                            class="icon-btn icon-btn-delete icon-20"
+                            data-bs-toggle="modal"
+                            data-bs-target="#userDeleteConfirmModal"
+                          >
+                            <i class="fa-solid fa-trash-alt"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
 
-              <div class="datatable-pagination d-flex justify-content-center mt-4">
+              <div
+                class="datatable-pagination d-flex justify-content-center mt-4"
+              >
                 <nav>
                   <ul class="pagination">
                     <li class="page-item">
-                      <a class="page-link icon-link" href="#" aria-label="Previous">
+                      <a
+                        class="page-link icon-link"
+                        href="#"
+                        aria-label="Previous"
+                      >
                         <span aria-hidden="true">&laquo;</span>
                       </a>
                     </li>
@@ -568,6 +778,7 @@
         <!-- END OF ADMIN MAIN -->
       </div>
     </div>
+
     <!-- DELETE CONFIRM MODAL -->
     <div
       class="modal fade"

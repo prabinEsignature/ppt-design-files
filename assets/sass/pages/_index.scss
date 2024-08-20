@@ -38,6 +38,11 @@
     }
   }
 
+  .sidebar-head{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+  }
+
   .sidebar-menu {
     .menu-item {
       width: 100%;
@@ -206,19 +211,73 @@
   padding: 32px;
   margin: 24px 0;
   max-width: 920px;
+
+  @include breakpoint-down(lg) {
+    padding: 24px;
+    margin: 20px 0;
+  }
+
+  @include breakpoint-down(sm) {
+    padding: 20px;
+  }
+
+  @include breakpoint-down(xs) {
+    padding: 16px;
+  }
 }
+
 .promptdata-list {
   max-height: 300px;
   overflow-y: scroll;
 }
+
 .promptdata-item {
   padding: 16px;
   border-radius: 8px;
   grid-template-columns: 40px auto;
   gap: 16px;
+  position: relative;
+
+  @include breakpoint-down(sm){
+    padding: 12px;
+  }
 }
-.promptdata-item-text {
-}
+
 .promptdata-item-text.text-prussian-blue p {
   color: $prussian-blue !important;
+}
+
+.promptdata-toolbar {
+  button {
+    padding: 4px;
+    border-radius: 4px;
+    transition: $default-transition;
+    &:hover {
+      background: $primary-100;
+      .btn-icon {
+        color: $primary;
+      }
+    }
+  }
+}
+
+
+// DASHBOARD PAGE
+.admin-dashboard{
+  margin-bottom: 40px;
+}
+
+.dash-head{
+  min-height: 200px;
+}
+
+.dash-card{
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
+  border: 0!important;
+  margin-top: -80px;
+}
+.dash-cards{
+  padding: 0 40px;
 }

@@ -4357,29 +4357,31 @@ input[readonly=true] {
   display: inline-flex;
 }
 
-@media (max-width: 767.98px) {
-  .page-sc-pagination {
-    flex-direction: column;
-  }
+.datatable-pagination .pagination {
+  gap: 6px;
 }
-.page-sc-pagination .pagination-show-block .form-select {
-  width: 54px;
-  height: 28px !important;
-  padding: 0 8px !important;
-  border-radius: 4px !important;
-  background-position: right 0.2rem center !important;
-}
-.page-sc-pagination .pagination-numbers-block .page-item .page-link {
+.datatable-pagination .page-item .page-link {
   border-radius: 8px !important;
-  border: 1px solid #e7e7e7;
-  background: #f6f6f6;
+  border: 1px solid rgba(68, 49, 141, 0.2);
+  background: #fff;
   color: #5d5d5d !important;
+  min-width: 40px;
+  height: 40px;
+  text-align: center;
+  transition: all ease-in-out 300ms;
 }
-.page-sc-pagination .pagination-numbers-block .page-item .page-link.active, .page-sc-pagination .pagination-numbers-block .page-item .page-link:hover {
+.datatable-pagination .page-item .page-link.active, .datatable-pagination .page-item .page-link:hover {
   border-radius: 8px;
-  border: 1px solid #c0e0fd !important;
-  background: #eff7ff !important;
-  color: #2975e7 !important;
+  border: 1px solid rgba(68, 49, 141, 0.5) !important;
+  background: rgba(68, 49, 141, 0.1) !important;
+  color: #44318d !important;
+}
+.datatable-pagination .page-item .page-link:focus {
+  box-shadow: none !important;
+}
+.datatable-pagination .page-item .page-link.icon-link {
+  background: #44318d;
+  color: #fff !important;
 }
 
 table {
@@ -4404,6 +4406,7 @@ table td {
   overflow-x: scroll;
   box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
   border-radius: 12px;
+  background: #fff;
 }
 .table-wrapper table {
   min-width: 1200px;
@@ -4503,6 +4506,10 @@ table td {
   .admin-sidebar.show-sidebar {
     transform: translateX(0);
   }
+}
+.admin-sidebar .sidebar-head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
 }
 .admin-sidebar .sidebar-menu .menu-item {
   width: 100%;
@@ -4645,6 +4652,22 @@ table td {
   margin: 24px 0;
   max-width: 920px;
 }
+@media (max-width: 991.98px) {
+  .promptdata {
+    padding: 24px;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .promptdata {
+    padding: 20px;
+  }
+}
+@media (max-width: 479.98px) {
+  .promptdata {
+    padding: 16px;
+  }
+}
 
 .promptdata-list {
   max-height: 300px;
@@ -4656,10 +4679,48 @@ table td {
   border-radius: 8px;
   grid-template-columns: 40px auto;
   gap: 16px;
+  position: relative;
+}
+@media (max-width: 575.98px) {
+  .promptdata-item {
+    padding: 12px;
+  }
 }
 
 .promptdata-item-text.text-prussian-blue p {
   color: #1e293b !important;
+}
+
+.promptdata-toolbar button {
+  padding: 4px;
+  border-radius: 4px;
+  transition: all ease-in-out 300ms;
+}
+.promptdata-toolbar button:hover {
+  background: rgba(68, 49, 141, 0.1);
+}
+.promptdata-toolbar button:hover .btn-icon {
+  color: #44318d;
+}
+
+.admin-dashboard {
+  margin-bottom: 40px;
+}
+
+.dash-head {
+  min-height: 200px;
+}
+
+.dash-card {
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
+  border: 0 !important;
+  margin-top: -80px;
+}
+
+.dash-cards {
+  padding: 0 40px;
 }
 
 .page-form {
@@ -4700,4 +4761,15 @@ table td {
   padding: 32px;
   margin: 24px 0;
   max-width: 920px;
+}
+@media (max-width: 991.98px) {
+  .dataform, .promptform {
+    padding: 24px;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .dataform, .promptform {
+    padding: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
