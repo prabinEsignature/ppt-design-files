@@ -80,6 +80,12 @@ table {
     color: map-get($accent-color-list, "error");
   }
 }
+.icon-btn-download{
+  color: $rich-black;
+  &:hover{
+    color: $rich-black;
+  }
+}
 
 .icon-btn {
   transition: $default-transition;
