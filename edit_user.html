@@ -147,29 +147,55 @@
                 >
               </button>
               <div class="dropdown">
-                <button type="button" class="profile-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="profile-btn-img rounded-circle overflow-hidden d-inline-flex">
-                    <img src="assets/images/profile.jpg" class="w-100 h-100 object-cover" alt="" />
+                <button
+                  type="button"
+                  class="profile-btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="profile-btn-img rounded-circle overflow-hidden d-inline-flex"
+                  >
+                    <img
+                      src="assets/images/profile.jpg"
+                      class="w-100 h-100 object-cover"
+                      alt=""
+                    />
                   </span>
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium" href="profile.html"><span
-                        class="icon-20"><i class="fa-solid fa-user"></i></span>My Profile</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="profile.html"
+                      ><span class="icon-20"
+                        ><i class="fa-solid fa-user"></i></span
+                      >My Profile</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium" href="change_password.html">
-                      <span class="icon-20"><i class="fa-solid fa-lock"></i> </span>Change Password</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="change_password.html"
+                    >
+                      <span class="icon-20"
+                        ><i class="fa-solid fa-lock"></i> </span
+                      >Change Password</a
+                    >
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium" href="#">
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-x-1 text-sm font-medium"
+                      href="#"
+                    >
                       <span class="icon-20">
                         <i class="fa-solid fa-right-from-bracket"></i>
                       </span>
-                      <span>Logout</span></a>
+                      <span>Logout</span></a
+                    >
                   </li>
                 </ul>
               </div>
@@ -182,15 +208,66 @@
             <div class="dataform rounded-8 bg-white">
               <div class="dataform-head">
                 <h3 class="font-bold mt-0 text-rich-black text-2xl">
-                  Add New User
+                  Edit User
                 </h3>
                 <p class="text-sm mb-0">
-                  Please enter your user information to add here.
+                  Please change the user information from here.
                 </p>
               </div>
               <div class="dataform-body mt-4">
                 <form>
                   <div class="form-wrapper">
+                    <div>
+                      <div class="form-elem mb-4">
+                        <label
+                          for=""
+                          class="form-label font-medium text-payne-grey"
+                          >Profile Picture</label
+                        >
+                        <div
+                          class="form-image d-flex align-items-center gap-x-4 mt-2"
+                        >
+                          <div
+                            class="form-image-preview rounded-circle overflow-hidden cursor-pointer"
+                          >
+                            <img
+                              src="assets/images/profile.jpg"
+                              class="object-cover w-100 h-100"
+                              id="profile-preview-img"
+                              alt=""
+                            />
+                            <span class="profile-preview-icon text-white">
+                              <i class="fas fa-edit"></i>
+                            </span>
+                            <input
+                              type="file"
+                              class="hidden"
+                              id="profile-select-input"
+                            />
+                          </div>
+                          <div
+                            class="form-image-actions d-flex flex-wrap align-items-center gap-x-2"
+                          >
+                            <button
+                              type="button"
+                              class="btn btn-xs btn-outline-primary"
+                            >
+                              <span class="btn-text">Change</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-xs"
+                              id="remove-img-btn"
+                            >
+                              <span class="btn-text">Remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <button type="submit" class="btn btn-sm btn-primary">
+                        <span class="btn-text">Change Profile</span>
+                      </button> -->
+                    </div>
                     <div class="form-elem-group mb-4">
                       <div class="d-grid grid-cols-2 gap-4">
                         <div class="form-elem">
@@ -203,6 +280,8 @@
                             type="text"
                             class="form-control"
                             placeholder="E.g. Richardson"
+                            name=""
+                            value="Richardson"
                           />
                         </div>
                         <div class="form-elem">
@@ -215,6 +294,8 @@
                             type="text"
                             class="form-control"
                             placeholder="E.g. Jackson"
+                            name=""
+                            value="Jackson"
                           />
                         </div>
                       </div>
@@ -227,7 +308,9 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="E.g. Richardson"
+                          placeholder="E.g. Baker Street, London"
+                          name=""
+                          value="Baker Street, London"
                         />
                       </div>
                       <div class="d-grid grid-cols-2 gap-4">
@@ -241,6 +324,8 @@
                             type="text"
                             class="form-control"
                             placeholder="E.g. richarson@gmail.com"
+                            name=""
+                            value="richarson@gmail"
                           />
                         </div>
                         <div class="form-elem">
@@ -253,6 +338,8 @@
                             type="text"
                             class="form-control"
                             placeholder="+1 123 XXX XXXX"
+                            name=""
+                            value="+1 123 XXX XXX"
                           />
                         </div>
                       </div>
@@ -263,8 +350,8 @@
                           >Role</label
                         >
                         <select class="form-select">
-                          <option selected>-- Select Role --</option>
-                          <option value="admin">Admin</option>
+                          <option>-- Select Role --</option>
+                          <option selected value="admin">Admin</option>
                           <option value="guest">Guest</option>
                           <option value="author0">Author</option>
                         </select>
@@ -279,6 +366,7 @@
                               value=""
                               id=""
                               name="status"
+                              checked
                             />
                             <label class="form-check-label text-sm ps-2" for="">
                               Active

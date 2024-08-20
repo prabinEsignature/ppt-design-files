@@ -20,6 +20,20 @@ $button-variants: (
     border-color: $primary,
     hover-bg: darken($primary, 15%),
     hover-text-color: $white
+  ),
+  "outline-primary": (
+    bg: $white,
+    text: $primary,
+    border-color: $primary,
+    hover-bg: $primary,
+    hover-text-color: $white
+  ),
+  "outline-french-gray": (
+    bg: $white,
+    text: $rich-black,
+    border-color: $french-gray,
+    hover-bg: $rich-black,
+    hover-text-color: $white
   )
 );
 
@@ -123,6 +137,7 @@ $button-variants: (
     &.btn-#{$color-name} {
       background: $color-value !important;
       color: $white !important;
+      border-color: $color-value!important;
       box-shadow:
         rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
         rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

@@ -92,6 +92,8 @@
   left: 0;
   margin-left: 260px;
   background: $white;
+  z-index: map-get($z-index, "sky");
+  column-gap: 16px;
 
   @include breakpoint-down(lg){
     margin-left: 0;

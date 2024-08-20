@@ -26,6 +26,8 @@
   font-size: 14px;
   color: $prussian-blue;
   border: 1px solid $french-gray;
+  font-weight: 500;
+  opacity: 0.9;
 
   &::placeholder {
     color: $slate-gray !important;
@@ -133,6 +135,23 @@ textarea {
     height: 70px;
     outline: 1px solid $primary;
     outline-offset: 2px;
+    position: relative;
+
+    &:hover{
+      .profile-preview-icon{
+        top: 50%;
+        scale: 1.2;
+      }
+    }
+
+    .profile-preview-icon{
+      position: absolute;
+      z-index: 5;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: $default-transition;
+    }
   }
 }
 
