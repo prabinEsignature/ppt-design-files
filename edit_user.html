@@ -217,56 +217,51 @@
               <div class="dataform-body mt-4">
                 <form>
                   <div class="form-wrapper">
-                    <div>
-                      <div class="form-elem mb-4">
-                        <label
-                          for=""
-                          class="form-label font-medium text-payne-grey"
-                          >Profile Picture</label
-                        >
+                    <div class="form-elem mb-4">
+                      <label
+                        for=""
+                        class="form-label font-medium text-payne-grey"
+                        >Profile Picture</label
+                      >
+                      <div
+                        class="form-image d-flex align-items-center gap-x-4 mt-2"
+                      >
                         <div
-                          class="form-image d-flex align-items-center gap-x-4 mt-2"
+                          class="form-image-preview rounded-circle overflow-hidden cursor-pointer"
                         >
-                          <div
-                            class="form-image-preview rounded-circle overflow-hidden cursor-pointer"
+                          <img
+                            src="assets/images/profile.jpg"
+                            class="object-cover w-100 h-100"
+                            id="profile-preview-img"
+                            alt=""
+                          />
+                          <span class="profile-preview-icon text-white">
+                            <i class="fas fa-edit"></i>
+                          </span>
+                          <input
+                            type="file"
+                            class="hidden"
+                            id="profile-select-input"
+                          />
+                        </div>
+                        <div
+                          class="form-image-actions d-flex flex-wrap align-items-center gap-x-2"
+                        >
+                          <button
+                            type="button"
+                            class="btn btn-xs btn-outline-primary"
                           >
-                            <img
-                              src="assets/images/profile.jpg"
-                              class="object-cover w-100 h-100"
-                              id="profile-preview-img"
-                              alt=""
-                            />
-                            <span class="profile-preview-icon text-white">
-                              <i class="fas fa-edit"></i>
-                            </span>
-                            <input
-                              type="file"
-                              class="hidden"
-                              id="profile-select-input"
-                            />
-                          </div>
-                          <div
-                            class="form-image-actions d-flex flex-wrap align-items-center gap-x-2"
+                            <span class="btn-text">Change</span>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-xs"
+                            id="remove-img-btn"
                           >
-                            <button
-                              type="button"
-                              class="btn btn-xs btn-outline-primary"
-                            >
-                              <span class="btn-text">Change</span>
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-xs"
-                              id="remove-img-btn"
-                            >
-                              <span class="btn-text">Remove</span>
-                            </button>
-                          </div>
+                            <span class="btn-text">Remove</span>
+                          </button>
                         </div>
                       </div>
-                      <!-- <button type="submit" class="btn btn-sm btn-primary">
-                        <span class="btn-text">Change Profile</span>
-                      </button> -->
                     </div>
                     <div class="form-elem-group mb-4">
                       <div class="d-grid grid-cols-2 gap-4">
@@ -400,7 +395,7 @@
                       </div>
                     </div>
                     <button type="submit" class="btn btn-sm btn-primary">
-                      <span class="btn-text">Create User</span>
+                      <span class="btn-text">Update User</span>
                     </button>
                   </div>
                 </form>
