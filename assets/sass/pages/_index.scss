@@ -95,7 +95,7 @@
   z-index: map-get($z-index, "sky");
   column-gap: 16px;
 
-  @include breakpoint-down(lg){
+  @include breakpoint-down(lg) {
     margin-left: 0;
   }
 
@@ -137,7 +137,7 @@
       }
     }
 
-    &::after{
+    &::after {
       display: none;
     }
   }
@@ -149,32 +149,54 @@
   padding: 16px 32px;
   margin-top: 80px;
 
-  @include breakpoint-down(lg){
+  @include breakpoint-down(lg) {
     padding: 16px;
     margin-top: 64px;
   }
 }
 
-.list-styled-disc{
+.list-styled-disc {
   list-style-type: disc;
 }
 
 // DROPDOWN
-.dropdown-menu{
+.dropdown-menu {
   padding: 12px;
   border: 1px solid rgba(0, 0, 0, 0.01);
   box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
 
-  .dropdown-item{
+  .dropdown-item {
     transition: $default-transition;
     margin: 4px 0;
 
-    &:hover{
+    &:hover {
       background: $primary-light;
       border-radius: 4px;
-      color: $white!important;
+      color: $white !important;
       box-shadow: 0 2px 4px 0 rgba(13, 23, 33, 0.08);
     }
   }
 }
 
+// USER DETAILS PAGE
+.user-details-head {
+  .user-head-top {
+    height: 160px;
+    background: url(../images/user_banner.jpeg) center/cover no-repeat;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .user-head-avatar {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -60px;
+    left: 20px;
+    outline: 4px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .user-head-bottom{
+    padding: 70px 20px 20px 20px;
+  }
+}

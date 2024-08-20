@@ -129,22 +129,35 @@ textarea {
   }
 }
 
-.form-image{
-  &-preview{
+input[readonly="true"],
+textarea[readonly="true"] {
+  border: 0 !important;
+  padding: 0 !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+input[readonly="true"] {
+  height: auto !important;
+}
+
+.form-image {
+  &-preview {
     width: 70px;
     height: 70px;
     outline: 1px solid $primary;
     outline-offset: 2px;
     position: relative;
 
-    &:hover{
-      .profile-preview-icon{
+    &:hover {
+      .profile-preview-icon {
         top: 50%;
         scale: 1.2;
       }
     }
 
-    .profile-preview-icon{
+    .profile-preview-icon {
       position: absolute;
       z-index: 5;
       top: 75%;
