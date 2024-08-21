@@ -7,11 +7,12 @@
             border-radius: 8px !important;
             border: 1px solid $primary-200;
             background: $white;
-            color: $prussian-blue !important;
-            min-width: 40px;
-            height: 40px;
+            color: $payne-grey !important;
+            min-width: 36px;
+            height: 36px;
             text-align: center;
             transition: $default-transition;
+            font-size: 14px!important;
 
             &.active,
             &:hover {
@@ -26,8 +27,8 @@
             }
 
             &.icon-link{
-                background: $primary;
-                color: $white!important;
+                background: $primary-100;
+                color: $primary!important;
             }
         }
     }

@@ -252,37 +252,46 @@ input[type="button"] {
 }
 
 .icon-btn-view {
-  color: $primary-light;
+  background: $primary-light;
   &:hover {
-    color: $primary-light;
+    background: $primary-light;
   }
 }
 
 .icon-btn-edit {
-  color: map-get($accent-color-list, "success");
+  background: map-get($accent-color-list, "success");
   &:hover {
-    color: map-get($accent-color-list, "success");
+    background: map-get($accent-color-list, "success");
   }
 }
 
 .icon-btn-delete {
-  color: map-get($accent-color-list, "error");
+  background: map-get($accent-color-list, "error");
   &:hover {
-    color: map-get($accent-color-list, "error");
+    background: map-get($accent-color-list, "error");
   }
 }
 
 .icon-btn-download {
-  color: $rich-black;
+  background: $rich-black;
   &:hover {
-    color: $rich-black;
+    background: $rich-black;
   }
 }
 
 .icon-btn {
   transition: $default-transition;
+  color: $white;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+  font-size: 12px!important;
 
   &:hover {
     scale: 1.1;
+    color: $white;
   }
 }

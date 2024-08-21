@@ -160,7 +160,7 @@
   gap: 16px;
   position: relative;
 
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     padding: 12px;
   }
 }
@@ -183,43 +183,44 @@
   }
 }
 
-
 // DASHBOARD PAGE
-.admin-dashboard{
+.admin-dashboard {
   margin-bottom: 40px;
 }
 
-.dash-head{
+.dash-head {
   min-height: 200px;
+  background-image: linear-gradient(43deg, #44318d 0%, #57409e 46%, #36247f 100%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
 
-  @include breakpoint-down(md){
+  @include breakpoint-down(md) {
     min-height: auto;
   }
 }
 
-.dash-card{
+.dash-card {
   padding: 32px 24px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
-  border: 0!important;
+  border: 0 !important;
   margin-top: -80px;
 
-  @include breakpoint-down(md){
+  @include breakpoint-down(md) {
     margin-top: 0;
   }
 }
 
-.dash-cards{
+.dash-cards {
   padding: 0 40px;
 
-  @include breakpoint-down(md){
-    grid-template-columns: 100%!important;
+  @include breakpoint-down(md) {
+    grid-template-columns: 100% !important;
     margin-top: 32px;
     padding: 0;
   }
 }
 
-.loader-wrapper{
+.loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -231,7 +232,7 @@
   align-items: center;
   background: $white;
 
-  .loader{
+  .loader {
     position: relative;
     z-index: 1002;
   }

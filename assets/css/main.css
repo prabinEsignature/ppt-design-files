@@ -3888,38 +3888,47 @@ input[type=button].btn-block {
 }
 
 .icon-btn-view {
-  color: #4f3c98;
+  background: #4f3c98;
 }
 .icon-btn-view:hover {
-  color: #4f3c98;
+  background: #4f3c98;
 }
 
 .icon-btn-edit {
-  color: #008656;
+  background: #008656;
 }
 .icon-btn-edit:hover {
-  color: #008656;
+  background: #008656;
 }
 
 .icon-btn-delete {
-  color: #dc3545;
+  background: #dc3545;
 }
 .icon-btn-delete:hover {
-  color: #dc3545;
+  background: #dc3545;
 }
 
 .icon-btn-download {
-  color: #161c24;
+  background: #161c24;
 }
 .icon-btn-download:hover {
-  color: #161c24;
+  background: #161c24;
 }
 
 .icon-btn {
   transition: all ease-in-out 300ms;
+  color: #fff;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+  font-size: 12px !important;
 }
 .icon-btn:hover {
   scale: 1.1;
+  color: #fff;
 }
 
 .unstyled {
@@ -4270,6 +4279,15 @@ input[type=button].btn-block {
 .form-select-sm {
   height: 40px;
   border-radius: 8px !important;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.form-control-xs,
+.form-select-xs {
+  height: 32px;
+  border-radius: 6px !important;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .form-control::file-selector-button {
@@ -4431,11 +4449,12 @@ input[readonly=true] {
   border-radius: 8px !important;
   border: 1px solid rgba(68, 49, 141, 0.2);
   background: #fff;
-  color: #1e293b !important;
-  min-width: 40px;
-  height: 40px;
+  color: #475569 !important;
+  min-width: 36px;
+  height: 36px;
   text-align: center;
   transition: all ease-in-out 300ms;
+  font-size: 14px !important;
 }
 .datatable-pagination .page-item .page-link.active, .datatable-pagination .page-item .page-link:hover {
   border-radius: 8px;
@@ -4447,8 +4466,8 @@ input[readonly=true] {
   box-shadow: none !important;
 }
 .datatable-pagination .page-item .page-link.icon-link {
-  background: #44318d;
-  color: #fff !important;
+  background: rgba(68, 49, 141, 0.1);
+  color: #44318d !important;
 }
 
 table {
@@ -4751,6 +4770,8 @@ table td {
 
 .dash-head {
   min-height: 200px;
+  background-image: linear-gradient(43deg, #44318d 0%, #57409e 46%, #36247f 100%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px;
 }
 @media (max-width: 767.98px) {
   .dash-head {
