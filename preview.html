@@ -66,6 +66,75 @@
         font-size: 14px !important;
         font-weight: 600;
       }
+      #all_slides_warpper > .slide {
+        border: 0!important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        outline: 6px solid #cbd5e1;
+      }
+      .slides-toolbar{
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 1399.98px){
+        #all_slides_warpper{
+          scale: 0.85!important;
+        }
+      }
+
+      @media(max-width: 1240px){
+        #all_slides_warpper{
+          scale: 0.8!important;
+        }
+      }
+
+      @media(max-width: 1199.98px){
+        #all_slides_warpper{
+          scale: 0.7!important;
+        }
+      }
+
+      @media(max-width: 1080px){
+        #all_slides_warpper{
+          scale: 0.6!important;
+        }
+      }
+
+      @media(max-width: 991.98px){
+        #all_slides_warpper{
+          scale: 0.7!important;
+        }
+      }
+
+      @media(max-width: 800px){
+        #all_slides_warpper{
+          scale: 0.6!important;
+        }
+      }
+
+      @media(max-width: 767.98px){
+        #all_slides_warpper{
+          scale: 0.5!important;
+        }
+      }
+
+      @media(max-width: 600px){
+        #all_slides_warpper{
+          scale: 0.45!important;
+        }
+      }
+
+      @media(max-width: 575.98px){
+        #all_slides_warpper{
+          scale: 0.4!important;
+        }
+      }
+
+      @media(max-width: 500px){
+        #all_slides_warpper{
+          scale: 0.35!important;
+        }
+      }
     </style>
   </head>
 
@@ -119,7 +188,7 @@
               </a>
               <a
                 href="prompt.html"
-                class="menu-item d-flex align-items-center gap-x-3 active"
+                class="menu-item d-flex align-items-center gap-x-3"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="far fa-window-restore"></i>
@@ -132,7 +201,7 @@
 
               <a
                 href="archives.html"
-                class="menu-item d-flex align-items-center gap-x-3"
+                class="menu-item d-flex align-items-center gap-x-3 active"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fas fa-folder"></i>
@@ -283,34 +352,38 @@
     <script src="./assets/js/main.js"></script>
     <script>
       var file_path = "demo.pptx";
+      var slidesScale = "80%";
+
       $("#resolte-container").officeToHtml({
         url: file_path,
         pptxSetting: {
-          slidesScale: "50%", // Change Slides scale by percent
+          slidesScale: slidesScale, // Change Slides scale by percent
           slideMode: true,
           slideType: "divs2slidesjs",
           revealjsPath: "",
-          keyBoardShortCut: true /** true,false ,condition: slideMode: true*/,
-          mediaProcess: true /** true,false: if true then process video and audio files */,
+          keyBoardShortCut: true,
+          mediaProcess: true,
           jsZipV2: false,
           slideModeConfig: {
             first: 1,
-            nav: true /** true,false : show or not nav buttons*/,
+            nav: true,
             navTxtColor: "#161c24",
-            keyBoardShortCut: false /** true,false ,condition: */,
-            showSlideNum: true /** true,false */,
-            showTotalSlideNum: true /** true,false */,
-            autoSlide: 1 /** false or seconds , F8 to active ,keyBoardShortCut: true */,
-            randomAutoSlide: false /** true,false ,autoSlide:true */,
-            loop: true /** true,false */,
-            background: false /** false or color*/,
-            transition:
-              "default" /** transition type: "slid","fade","default","random" , to show transition efects :transitionTime > 0.5 */,
-            transitionTime: 0 /** transition time between slides in seconds */,
+            keyBoardShortCut: false,
+            showSlideNum: true,
+            showTotalSlideNum: true,
+            autoSlide: 1,
+            randomAutoSlide: false,
+            loop: true,
+            background: false,
+            transition: "default",
+            transitionTime: 0,
           },
           revealjsConfig: {},
         },
       });
+
+      window.onload = adjustSlidesScale;
+      window.onresize = adjustSlidesScale;
     </script>
   </body>
 </html>

@@ -1,0 +1,11 @@
+#all_slides_warpper {
+    @include breakpoint-down(lg) {
+        scale: 0.9;
+    }
+
+    & > .slide{
+        border: 4px solid $primary;
+        box-shadow: none!important;
+        border-radius: 0!important;
+    }
+}
