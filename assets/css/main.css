@@ -4799,4 +4799,8 @@ table td {
   .dataform, .promptform, .preview-block {
     padding: 20px;
   }
+}
+
+.preview-block {
+  max-width: 100%;
 }/*# sourceMappingURL=main.css.map */

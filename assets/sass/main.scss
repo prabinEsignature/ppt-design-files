@@ -21,7 +21,6 @@
         'components/icons',
         'components/toast',
         'components/modal',
-        'components/title',
         'components/form',
         'components/pagination',
         'components/tabs',
@@ -31,4 +30,5 @@
         'layout/navbar',
         'layout/footer';
 @import "pages/index", 
-        "pages/forms";
+        "pages/forms",
+        "pages/preview";

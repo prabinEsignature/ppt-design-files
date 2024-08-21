@@ -21,11 +21,25 @@ $button-variants: (
     hover-bg: darken($primary, 15%),
     hover-text-color: $white
   ),
+  "primary": (
+    bg: $secondary,
+    text: $white,
+    border-color: $secondary,
+    hover-bg: darken($secondary, 15%),
+    hover-text-color: $white
+  ),
   "outline-primary": (
     bg: $white,
     text: $primary,
     border-color: $primary,
     hover-bg: $primary,
+    hover-text-color: $white
+  ),
+  "outline-secondary": (
+    bg: $white,
+    text: $secondary,
+    border-color: $secondary,
+    hover-bg: $secondary,
     hover-text-color: $white
   ),
   "outline-french-gray": (
@@ -137,7 +151,7 @@ $button-variants: (
     &.btn-#{$color-name} {
       background: $color-value !important;
       color: $white !important;
-      border-color: $color-value!important;
+      border-color: $color-value !important;
       box-shadow:
         rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
         rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -163,8 +177,8 @@ $button-variants: (
     color: map-get($props, text) !important;
     border: $btn-border-width solid map-get($props, border-color) !important;
     box-shadow:
-        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
     &:hover,
     &:focus,
@@ -234,5 +248,41 @@ input[type="reset"],
 input[type="button"] {
   &.btn-block {
     width: 100%;
+  }
+}
+
+.icon-btn-view {
+  color: $primary-light;
+  &:hover {
+    color: $primary-light;
+  }
+}
+
+.icon-btn-edit {
+  color: map-get($accent-color-list, "success");
+  &:hover {
+    color: map-get($accent-color-list, "success");
+  }
+}
+
+.icon-btn-delete {
+  color: map-get($accent-color-list, "error");
+  &:hover {
+    color: map-get($accent-color-list, "error");
+  }
+}
+
+.icon-btn-download {
+  color: $rich-black;
+  &:hover {
+    color: $rich-black;
+  }
+}
+
+.icon-btn {
+  transition: $default-transition;
+
+  &:hover {
+    scale: 1.1;
   }
 }

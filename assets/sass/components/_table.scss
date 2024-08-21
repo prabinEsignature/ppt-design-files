@@ -62,39 +62,6 @@ table {
   }
 }
 
-.icon-btn-view {
-  color: $primary-light;
-  &:hover {
-    color: $primary-light;
-  }
-}
-.icon-btn-edit {
-  color: map-get($accent-color-list, "success");
-  &:hover {
-    color: map-get($accent-color-list, "success");
-  }
-}
-.icon-btn-delete {
-  color: map-get($accent-color-list, "error");
-  &:hover {
-    color: map-get($accent-color-list, "error");
-  }
-}
-.icon-btn-download{
-  color: $rich-black;
-  &:hover{
-    color: $rich-black;
-  }
-}
-
-.icon-btn {
-  transition: $default-transition;
-
-  &:hover {
-    scale: 1.1;
-  }
-}
-
 .status-badge {
   border-radius: 100vh;
   padding: 4px 8px;

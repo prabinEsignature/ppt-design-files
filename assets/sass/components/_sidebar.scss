@@ -1,0 +1,78 @@
+.admin-sidebar-overlay {
+    transition: $default-transition;
+    @include breakpoint-down(lg) {
+        &.show-sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: $z-low;
+        }
+    }
+}
+
+.admin-sidebar {
+    padding: 24px 20px;
+    width: 260px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 2px 4px 4px rgba(13, 23, 33, 0.18);
+    z-index: $z-high;
+    transition: $default-transition;
+
+    @include breakpoint-down(lg) {
+        transform: translateX(-100%);
+
+        &.show-sidebar {
+            transform: translateX(0);
+        }
+    }
+
+    .sidebar-head {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 12px;
+    }
+
+    .sidebar-menu {
+        .menu-item {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: $default-transition;
+
+            &-icon {
+                color: $white;
+                transition: $default-transition;
+            }
+
+            &-text {
+                transition: $default-transition;
+            }
+
+            &:hover,
+            &.active {
+                .menu-item-icon {
+                    color: $white;
+                }
+                .menu-item-text {
+                    color: $white !important;
+                }
+            }
+
+            &:hover {
+                background: darken($primary, 2%);
+            }
+
+            &.active {
+                background: darken($primary, 8%);
+            }
+        }
+    }
+}
