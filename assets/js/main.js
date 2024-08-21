@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // LOADER
+  window.onload = function () {
+    document.querySelector(".loader-wrapper").style.display = "none";
+  };
   // PASSWORD TOGGLE
   const passwordFormElems = document.querySelectorAll(".password-form-elem");
 
@@ -48,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const fileInput = document.getElementById("profile-select-input");
   const imgPreview = document.getElementById("profile-preview-img");
   const removeImgBtn = document.getElementById("remove-img-btn");
-  const defaultImgSrc = imgPreview.src;
+  const defaultImgSrc = imgPreview?.src;
 
-  fileInput.addEventListener("change", function (event) {
+  fileInput?.addEventListener("change", function (event) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -61,11 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  imgPreview.parentElement.addEventListener("click", function () {
+  imgPreview?.parentElement.addEventListener("click", function () {
     fileInput.click();
   });
 
-  removeImgBtn.addEventListener("click", function () {
+  removeImgBtn?.addEventListener("click", function () {
     imgPreview.src = defaultImgSrc;
     fileInput.value = "";
   });
