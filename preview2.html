@@ -19,7 +19,45 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css"
+      integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css"
+      integrity="sha512-5w6AICFraU3+mkD1dTmad4vXyyJ1nZM/KA2TG8oQ5yiyTYAXssxPk930O1upFxeC7ml4CxyXC1QBzthu26ZxZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/simple.min.css"
+      integrity="sha512-H0Emo35O2iLohWrEdT0VaS7CMV7vutYXmrrQnlEcOCduO9takaRwWQfCkbXzvxKVRchuBn2+JBKZTSRzOghkSw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css"
+      integrity="sha512-0BwgQfciYCCQc2rKINa7wL2k5vGAjF5dyL90A598QMimsVDie6M/4ShOLG07HJpNtSc9JB6m2s9B9OGam3rmTg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        .reveal{
+            height: 600px;
+        }
+    </style>
   </head>
 
   <body>
@@ -38,9 +76,12 @@
           <div
             class="sidebar-head d-flex align-items-center justify-content-between w-100"
           >
-          <a href="index.html" class="text-white text-2xl font-bold mb-0 font-dmsans">
-            <img src="assets/images/logo_white.png" alt="" />
-          </a>
+            <a
+              href="index.html"
+              class="text-white text-2xl font-bold mb-0 font-dmsans"
+            >
+              <img src="assets/images/logo_white.png" alt="" />
+            </a>
             <button
               type="button"
               class="text-white text-3xl hover-scale icon-24 d-lg-none"
@@ -65,7 +106,7 @@
               </a>
               <a
                 href="users.html"
-                class="menu-item d-flex align-items-center gap-x-3 active"
+                class="menu-item d-flex align-items-center gap-x-3"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fa-solid fa-user"></i>
@@ -90,7 +131,7 @@
 
               <a
                 href="archives.html"
-                class="menu-item d-flex align-items-center gap-x-3"
+                class="menu-item d-flex align-items-center gap-x-3 active"
               >
                 <span class="menu-item-icon icon-16">
                   <i class="fas fa-folder"></i>
@@ -205,154 +246,38 @@
 
           <!-- ADMIN CONTENT -->
           <div class="admin-content">
-            <div class="user-details-head rounded-12 bg-white overflow-hidden">
-              <div class="user-head-top">
-                <div class="user-head-avatar rounded-circle overflow-hidden">
-                  <img
-                    src="assets/images/profile.jpg"
-                    class="w-100 h-100 object-cover"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="user-head-bottom">
-                <h3 class="text-2xl font-semibold text-rich-black">
-                  Anderson Richard
-                </h3>
-                <p class="text-sm mb-0">@andersonbro</p>
-                <a href="edit_user.html" class="btn btn-primary btn-sm mt-3">
-                  <span class="btn-icon"><i class="fas fa-user-edit"></i></span>
-                  <span class="btn-text">Edit Profile</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="dataform rounded-8 bg-white">
-              <div class="dataform-head border-b-gray-200-1">
-                <h3 class="font-bold mt-0 mb-1 text-rich-black text-2xl">
-                  User information
-                </h3>
-              </div>
-              <div class="dataform-body mt-4">
-                <form>
-                  <div class="form-wrapper">
-                    <div class="form-elem-group mb-4">
-                      <div class="d-grid grid-cols-2 gap-4">
-                        <div class="form-elem">
-                          <label
-                            for=""
-                            class="form-label font-semibold text-rich-black"
-                            >First name</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="Richard"
-                            readonly="true"
-                          />
-                        </div>
-                        <div class="form-elem">
-                          <label
-                            for=""
-                            class="form-label font-semibold text-rich-black"
-                            >Last name</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="Jackson"
-                            readonly="true"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-elem">
-                        <label
-                          for=""
-                          class="form-label font-semibold text-rich-black"
-                          >Contact Address</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="Richard"
-                          readonly="true"
-                        />
-                      </div>
-                      <div class="d-grid grid-cols-2 gap-4">
-                        <div class="form-elem">
-                          <label
-                            for=""
-                            class="form-label font-semibold text-rich-black"
-                            >Email Address</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="richarson@gmail"
-                            readonly="true"
-                          />
-                        </div>
-                        <div class="form-elem">
-                          <label
-                            for=""
-                            class="form-label font-semibold text-rich-black"
-                            >Phone</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            value="+1 123 XXX XXX"
-                            readonly="true"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-elem">
-                        <label
-                          for=""
-                          class="form-label font-semibold text-rich-black"
-                          >Role</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="Admin"
-                          readonly="true"
-                        />
-                      </div>
-                      <div class="form-elem">
-                        <label
-                          for=""
-                          class="form-label font-semibold text-rich-black"
-                          >Status</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="Active"
-                          readonly="true"
-                        />
-                      </div>
-                      <div class="form-elem">
-                        <label
-                          for=""
-                          class="form-label font-semibold text-rich-black"
-                          >About / Bio</label
-                        >
-                        <textarea
-                          class="form-control"
-                          name=""
-                          id=""
-                          readonly="true"
-                        >
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen disse var ius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</textarea
-                        >
-                      </div>
+            <div class="preview-block bg-white rounded-8">
+              <div class="preview-content">
+                <!-- PREVIEW CONTENT HERE -->
+                <div class="reveal">
+                    <div class="slides">
+                      <section>Slide 1 out of 4</section>
+                      <section>Slide 2 out of 4</section>
+                      <section>Slide 3 out of 4</section>
+                      <section>Slide 4 out of 4</section>
                     </div>
-                    <button type="submit" class="btn btn-sm btn-primary">
-                      <span class="btn-text">Save Changes</span>
-                    </button>
                   </div>
-                </form>
+                  <!--  END OF PREVIEW CONTENT HERE -->
+              </div>
+              <div
+                class="preview-btn-group d-flex justify-content-center flex-wrap gap-x-2 mt-4"
+              >
+                <button type="button" class="btn btn-primary btn-sm">
+                  <span class="btn-icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Donwload PDF</span>
+                </button>
+                <a
+                  href="demo.pptx"
+                  class="btn btn-outline-primary btn-sm"
+                  download="demo.pptx"
+                >
+                  <span class="btn-icon">
+                    <i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Donwload PPT</span>
+                </a>
               </div>
             </div>
           </div>
@@ -366,6 +291,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen disse var ius en
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
     <script src="./assets/js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"
+      integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            keyboard: true,
+            jumpToSlide: true,
+        });
+    </script>
   </body>
 </html>

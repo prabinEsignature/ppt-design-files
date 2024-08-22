@@ -4625,6 +4625,7 @@ table td {
 @media (max-width: 991.98px) {
   .admin-appbar {
     margin-left: 0;
+    padding: 16px;
   }
 }
 .admin-appbar .appbar-search-form {
@@ -4652,6 +4653,12 @@ table td {
 }
 .admin-appbar .profile-btn-img img {
   border-radius: 100%;
+}
+@media (max-width: 575.98px) {
+  .admin-appbar .profile-btn-img {
+    width: 32px;
+    height: 32px;
+  }
 }
 .admin-appbar .profile-btn::after {
   display: none;

@@ -25,6 +25,7 @@
 
   @include breakpoint-down(lg) {
     margin-left: 0;
+    padding: 16px;
   }
 
   .appbar-search {
@@ -62,6 +63,11 @@
 
       img {
         border-radius: 100%;
+      }
+
+      @include breakpoint-down(sm){
+        width: 32px;
+        height: 32px;
       }
     }
 
