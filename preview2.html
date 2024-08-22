@@ -54,9 +54,9 @@
       referrerpolicy="no-referrer"
     />
     <style>
-        .reveal{
-            height: 600px;
-        }
+      .reveal {
+        height: 600px;
+      }
     </style>
   </head>
 
@@ -250,14 +250,14 @@
               <div class="preview-content">
                 <!-- PREVIEW CONTENT HERE -->
                 <div class="reveal">
-                    <div class="slides">
-                      <section>Slide 1 out of 4</section>
-                      <section>Slide 2 out of 4</section>
-                      <section>Slide 3 out of 4</section>
-                      <section>Slide 4 out of 4</section>
-                    </div>
+                  <div class="slides">
+                    <section contenteditable="true">Slide 1 out of 4</section>
+                    <section contenteditable="true">Slide 2 out of 4</section>
+                    <section contenteditable="true">Slide 3 out of 4</section>
+                    <section contenteditable="true">Slide 4 out of 4</section>
                   </div>
-                  <!--  END OF PREVIEW CONTENT HERE -->
+                </div>
+                <!--  END OF PREVIEW CONTENT HERE -->
               </div>
               <div
                 class="preview-btn-group d-flex justify-content-center flex-wrap gap-x-2 mt-4"
@@ -300,12 +300,14 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            keyboard: true,
-            jumpToSlide: true,
-        });
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        keyboard: true,
+        jumpToSlide: true,
+        center: true,
+        hash: true,
+      });
     </script>
   </body>
 </html>
