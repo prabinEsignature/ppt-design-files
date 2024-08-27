@@ -1,3 +1,17 @@
+/* ########## CALIBRI FONT ########## */
+// Calibri Regular
+@include font-face("Calibri", "./fonts/Calibri", normal, normal, ("Calibri"));
+// Calibri Bold
+@include font-face("Calibri", "./fonts/Calibri-Bold", bold, normal, ("Calibri Bold", "Calibri-Bold"));
+// Calibri Bold Italic
+@include font-face("Calibri", "./fonts/Calibri-BoldItalic", bold, italic, ("Calibri Bold Italic", "Calibri-BoldItalic"));
+// Calibri Italic
+@include font-face("Calibri", "./fonts/Calibri-Italic", normal, italic, ("Calibri Italic", "Calibri-Italic"));
+// Calibri Light
+@include font-face("Calibri", "./fonts/Calibri-Light", 300, normal, ("Calibri Light", "Calibri-Light"));
+// Calibri Light Italic
+@include font-face("Calibri", "./fonts/Calibri-LightItalic", 300, italic, ("Calibri Light Italic", "Calibri-LightItalic"));
+
 // Typography
 html {
   font-family: $font-family-inter;

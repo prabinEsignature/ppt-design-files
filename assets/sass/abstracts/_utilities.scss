@@ -38,7 +38,8 @@
 // FONT STACK CLASSES
 $font-families: (
   dmsans: $font-family-dmsans,
-  inter: $font-family-inter
+  inter: $font-family-inter,
+  calibri: $font-family-calibri
 );
 
 @mixin font-families($fonts) {

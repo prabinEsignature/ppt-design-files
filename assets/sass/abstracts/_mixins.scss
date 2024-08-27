@@ -1,12 +1,20 @@
 @use "sass:math";
 
 /* ##### FONT IMPORTS ##### */
-@mixin font-face($font-name, $file-path, $weight: normal, $style: normal) {
+@mixin font-face($font-name, $file-path, $weight: normal, $style: normal, $local-names: null) {
   @font-face {
     font-family: quote($font-name);
     src: url($file-path + ".eot");
+
+    $local-string: ""; 
+    @if $local-names {
+      @each $local-name in $local-names {
+        $local-string: $local-string + "local('" + $local-name + "'), ";
+      }
+    }
+
     src:
-      url($file-path + ".eot?#iefix") format("embedded-opentype"),
+      #{$local-string}url($file-path + ".eot?#iefix") format("embedded-opentype"),
       url($file-path + ".woff2") format("woff2"),
       url($file-path + ".woff") format("woff"),
       url($file-path + ".ttf") format("truetype"),

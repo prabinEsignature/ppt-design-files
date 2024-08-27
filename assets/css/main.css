@@ -396,6 +396,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.font-calibri {
+  font-family: "Calibri", sans-serif;
+}
+
 /* CURSOR */
 .cursor-pointer {
   cursor: pointer;
@@ -3023,6 +3027,55 @@ template {
   }
 }
 
+/* ########## CALIBRI FONT ########## */
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri.eot");
+  src: local('Calibri'), url("./fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri.woff2") format("woff2"), url("./fonts/Calibri.woff") format("woff"), url("./fonts/Calibri.ttf") format("truetype"), url("./fonts/Calibri.svg#Calibri") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri-Bold.eot");
+  src: local('Calibri Bold'), local('Calibri-Bold'), url("./fonts/Calibri-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri-Bold.woff2") format("woff2"), url("./fonts/Calibri-Bold.woff") format("woff"), url("./fonts/Calibri-Bold.ttf") format("truetype"), url("./fonts/Calibri-Bold.svg#Calibri") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri-BoldItalic.eot");
+  src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'), url("./fonts/Calibri-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri-BoldItalic.woff2") format("woff2"), url("./fonts/Calibri-BoldItalic.woff") format("woff"), url("./fonts/Calibri-BoldItalic.ttf") format("truetype"), url("./fonts/Calibri-BoldItalic.svg#Calibri") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri-Italic.eot");
+  src: local('Calibri Italic'), local('Calibri-Italic'), url("./fonts/Calibri-Italic.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri-Italic.woff2") format("woff2"), url("./fonts/Calibri-Italic.woff") format("woff"), url("./fonts/Calibri-Italic.ttf") format("truetype"), url("./fonts/Calibri-Italic.svg#Calibri") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri-Light.eot");
+  src: local('Calibri Light'), local('Calibri-Light'), url("./fonts/Calibri-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri-Light.woff2") format("woff2"), url("./fonts/Calibri-Light.woff") format("woff"), url("./fonts/Calibri-Light.ttf") format("truetype"), url("./fonts/Calibri-Light.svg#Calibri") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri-LightItalic.eot");
+  src: local('Calibri Light Italic'), local('Calibri-LightItalic'), url("./fonts/Calibri-LightItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri-LightItalic.woff2") format("woff2"), url("./fonts/Calibri-LightItalic.woff") format("woff"), url("./fonts/Calibri-LightItalic.ttf") format("truetype"), url("./fonts/Calibri-LightItalic.svg#Calibri") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 html {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -4512,6 +4565,7 @@ table td {
 .table-wrapper tbody td {
   vertical-align: middle;
   border-bottom: 1px solid #dbe2ea;
+  max-width: 400px;
 }
 
 .status-badge {
@@ -4880,4 +4934,8 @@ table td {
 
 .preview-block {
   max-width: 100%;
+}
+
+.reveal * {
+  font-family: "Calibri", sans-serif !important;
 }/*# sourceMappingURL=main.css.map */
